@@ -10,6 +10,7 @@
 #define FALSE 0
 #define OK    0
 #define NULL_PTR NULL
+#define CMD_NULL 0
 
 typedef void VOID;
 typedef short int SHORT;
