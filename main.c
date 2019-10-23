@@ -5,6 +5,7 @@ ULONG main()
 {
 	ULONG ulRet = OK;
 	ulRet = CMD_Init();
-	 
+	CMD_CmdEntry();
+
 	return ulRet;
 }

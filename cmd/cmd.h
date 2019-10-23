@@ -4,8 +4,10 @@
 #include "../base/error.h"
 
 #define MAX_CMD_MODE_NUM 16
+#define CMD_MODE
 #define CMD_MODE_GLOBAL_STRING "global"
 #define MAX_CMD_KEY_LEN 100
+#define MAX_CMD_LEN 255
 
 typedef enum eCmdModeType
 {
@@ -14,6 +16,7 @@ typedef enum eCmdModeType
 }CMD_MODE_TYPE_EN;
 
 INT g_iCmdMode;
+CHAR g_acCmdModeStringList[MAX_CMD_MODE_NUM][MAX_CMD_KEY_LEN];
 
 typedef enum eCmdKeyType
 {
@@ -67,5 +70,6 @@ CMD_TREE_NODE_S* g_pstCmdKeyList;
 
 ULONG CMD_Init();
 ULONG CMD_KeyInit();
+ULONG CMD_CmdEntry();
 
 #endif

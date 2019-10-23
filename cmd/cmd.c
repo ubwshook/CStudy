@@ -93,11 +93,48 @@ ULONG CMD_IintCmdTree()
 	return OK;
 }
 
+VOID CMD_InitCmdModeString()
+{
+	BASE_Memcpy(g_acCmdModeStringList[CMD_MODE_GLOBAL], CMD_MODE_GLOBAL_STRING, strlen(CMD_MODE_GLOBAL_STRING));
+
+	return;
+}
+
 ULONG CMD_Init()
 {
 	ULONG ulRet = OK;
 	printf("Begin init CmdTree! \n");
+	CMD_InitCmdModeString();
 	CMD_SetDeafultMode();
 	ulRet = CMD_KeyInit();
 	return ulRet;
+}
+
+ULONG CMD_GetCmdMode()
+{
+	return g_iCmdMode;
+}
+
+CHAR* CMD_GetCmdModeString()
+{
+	ULONG ulCmdMode;
+	ulCmdMode = CMD_GetCmdMode();
+	return g_acCmdModeStringList[ulCmdMode];
+
+}
+
+VOID CMD_CmdEntry()
+{
+	CHAR* pcCmdModeString;
+	CHAR  acInputString[MAX_CMD_LEN];
+	BOOL  bDealFlag = FALSE;
+
+	while (TRUE) {
+		pcCmdModeString = CMD_GetCmdModeString();
+		printf("<%s>", pcCmdModeString);
+		fgets(acInputString, MAX_CMD_LEN, stdin);  //使用fgets是安全的
+		printf("%s", acInputString);
+	}
+
+	return;
 }
