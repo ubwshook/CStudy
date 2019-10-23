@@ -70,6 +70,6 @@ CMD_TREE_NODE_S* g_pstCmdKeyList;
 
 ULONG CMD_Init();
 ULONG CMD_KeyInit();
-ULONG CMD_CmdEntry();
+VOID CMD_CmdEntry();
 
 #endif
