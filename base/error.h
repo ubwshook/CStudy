@@ -3,8 +3,8 @@
 
 typedef enum eBaseErrorCode 
 {
-	ERROR_MALLOC_FAIL = 1,
-	ERROR_BUTT
+    ERROR_MALLOC_FAIL = 1,
+    ERROR_BUTT
 
 }BASE_ERROR_CODE_EN;
 

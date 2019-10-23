@@ -26,7 +26,7 @@ VOID CMD_DisplayCmdKey()
 {
     ULONG ulLoop;
     CMD_TREE_NODE_S* pstCurrentCmdKey;
-    
+
     for (ulLoop = 0; ulLoop < CMD_KEY_BUTT; ulLoop++)
     {
         pstCurrentCmdKey = g_pstCmdKeyList + ulLoop;
