@@ -29,4 +29,8 @@ VOID BASE_Free(VOID* pPtr);
 VOID BASE_Memcpy(VOID* pDst, VOID* psrc, ULONG ulSize);
 VOID BASE_Memset(VOID* pPtr, INT iValue, ULONG ulNum);
 
+ULONG BASE_StrLen(CHAR* pcString);
+CHAR* BASE_StrNCpy(CHAR* pcDstStr, CHAR* pcSrcStr, ULONG ulSize);
+INT   BASR_StrCmp(CHAR* pcStr1, CHAR* pcStr2);
+
 #endif

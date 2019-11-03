@@ -71,5 +71,6 @@ CMD_TREE_NODE_S* g_pstCmdKeyList;
 ULONG CMD_Init();
 ULONG CMD_KeyInit();
 VOID CMD_CmdEntry();
+ULONG CMD_InstallCmd(CHAR* pcCmdStr, ULONG ulCmdMode);
 
 #endif
